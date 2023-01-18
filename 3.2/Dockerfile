@@ -1,4 +1,4 @@
-FROM ubuntu:cosmic
+FROM ubuntu:cosmic@sha256:7d657275047118bb77b052c4c0ae43e8a289ca2879ebfa78a703c93aa8fd686c
 
 MAINTAINER dorukozturk <dorukozturk@kitware.com>
 
