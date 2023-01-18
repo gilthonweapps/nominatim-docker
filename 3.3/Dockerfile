@@ -1,4 +1,4 @@
-FROM ubuntu:disco
+FROM ubuntu:disco@sha256:2adeae829bf27a3399a0e7db8ae38d5adb89bcaf1bbef378240bc0e6724e8344
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C.UTF-8
