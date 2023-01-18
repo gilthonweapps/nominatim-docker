@@ -33,9 +33,9 @@ RUN true \
         liblua5.4-dev \
         # PostgreSQL.
         postgresql-contrib \
-        postgresql-server-dev-14 \
-        postgresql-14-postgis-3 \
-        postgresql-14-postgis-3-scripts \
+        postgresql-server-dev-15 \
+        postgresql-15-postgis-3 \
+        postgresql-15-postgis-3-scripts \
         # PHP and Apache 2.
         php \
         php-intl \
@@ -115,8 +115,8 @@ RUN true \
 COPY conf.d/apache.conf /etc/apache2/sites-enabled/000-default.conf
 
 # Postgres config overrides to improve import performance (but reduce crash recovery safety)
-COPY conf.d/postgres-import.conf /etc/postgresql/14/main/conf.d/postgres-import.conf.disabled
-COPY conf.d/postgres-tuning.conf /etc/postgresql/14/main/conf.d/
+COPY conf.d/postgres-import.conf /etc/postgresql/15/main/conf.d/postgres-import.conf.disabled
+COPY conf.d/postgres-tuning.conf /etc/postgresql/15/main/conf.d/
 
 COPY config.sh /app/config.sh
 COPY init.sh /app/init.sh
