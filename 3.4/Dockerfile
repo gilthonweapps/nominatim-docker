@@ -1,4 +1,4 @@
-FROM ubuntu:eoan
+FROM ubuntu:eoan@sha256:f332c4057e21ec71cc8b20b05328d476104a069bfa6882877e0920e8140edcf0
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C.UTF-8
