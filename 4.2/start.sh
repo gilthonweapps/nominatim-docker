@@ -19,7 +19,7 @@ else
   useradd -m -p ${NOMINATIM_PASSWORD} nominatim
 fi
 
-IMPORT_FINISHED=/var/lib/postgresql/14/main/import-finished
+IMPORT_FINISHED=/var/lib/postgresql/15/main/import-finished
 
 if [ ! -f ${IMPORT_FINISHED} ]; then
   /app/init.sh
