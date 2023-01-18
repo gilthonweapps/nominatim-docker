@@ -10,8 +10,8 @@ RUN true \
     && echo '#!/bin/sh\nexit 101' > /usr/sbin/policy-rc.d \
     && chmod +x /usr/sbin/policy-rc.d \
     # Postgresql repo
-    && sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' \
-    && wget -qO- https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo tee /etc/apt/trusted.gpg.d/pgdg.asc &>/dev/null \
+    && sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt jammy-pgdg main" > /etc/apt/sources.list.d/pgdg.list' \
+    && wget -qO- https://www.postgresql.org/media/keys/ACCC4CF8.asc | tee /etc/apt/trusted.gpg.d/pgdg.asc &>/dev/null \
     # Install all required packages.
     && apt-get -y update -qq \
     && apt-get -y install \
