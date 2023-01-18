@@ -145,5 +145,6 @@ EXPOSE 5432
 EXPOSE 8080
 
 COPY conf.d/env $PROJECT_DIR/.env
+COPY conf.d/import-wanderinga.lua $PROJECT_DIR/
 
 CMD ["/app/start.sh"]
