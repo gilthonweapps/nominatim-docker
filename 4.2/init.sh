@@ -118,7 +118,7 @@ sudo -E -u nominatim psql -d nominatim -c "ANALYZE VERBOSE"
 sudo service postgresql stop
 
 # Remove slightly unsafe postgres config overrides that made the import faster
-rm /etc/postgresql/14/main/conf.d/postgres-import.conf
+rm /etc/postgresql/15/main/conf.d/postgres-import.conf
 
 echo "Deleting downloaded dumps in ${PROJECT_DIR}"
 rm -f ${PROJECT_DIR}/*sql.gz
